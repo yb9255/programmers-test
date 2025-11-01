@@ -1,3 +1,5 @@
+/** https://school.programmers.co.kr/learn/courses/30/lessons/42628 */
+
 function solution(operations) {
   const arr = [];
 
@@ -41,12 +43,12 @@ console.log(
   '결과1:',
   result1 === output1
     ? '✅ 통과'
-    : `❌ 실패 (기대값: ${output1}, 실제값: ${result1})`,
+    : `❌ 실패 (기대값: ${output1}, 실제값: ${result1})`
 );
 
 console.log(
   '결과2:',
   result2 === output2
     ? '✅ 통과'
-    : `❌ 실패 (기대값: ${output2}, 실제값: ${result2})`,
+    : `❌ 실패 (기대값: ${output2}, 실제값: ${result2})`
 );

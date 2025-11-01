@@ -1,3 +1,5 @@
+/** https://school.programmers.co.kr/learn/courses/30/lessons/42626 */
+
 class MinHeap {
   constructor() {
     this.values = [];
@@ -114,5 +116,5 @@ console.log(
   '결과:',
   result === output
     ? '✅ 통과'
-    : `❌ 실패 (기대값: ${output}, 실제값: ${result})`,
+    : `❌ 실패 (기대값: ${output}, 실제값: ${result})`
 );
