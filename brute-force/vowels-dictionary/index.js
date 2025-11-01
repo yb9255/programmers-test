@@ -12,6 +12,8 @@ function solution(word) {
   const vowels = ['A', 'E', 'I', 'O', 'U'];
 
   const getCount = (word, target) => {
+    if (answer) return;
+
     if (word === target) {
       answer = count;
       return;
@@ -35,7 +37,7 @@ const testSolution = (input, expected) => {
     '결과:',
     result === expected
       ? '✅ 통과'
-      : `❌ 실패 (기대값: ${expected}, 실제값: ${result})`,
+      : `❌ 실패 (기대값: ${expected}, 실제값: ${result})`
   );
 };
 
