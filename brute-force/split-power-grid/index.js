@@ -6,9 +6,9 @@ function solution(n, wires) {
    * 2. wires를 순회하면서 connectedVList v1 인덱스 배열에는 v2를, v2 인덱스 배열에는 v1을 담는다.
    *
    * 3. skip하는 송전탑 index 두개를 받고 사이즈를 check해주는 checkSize 함수를 생성한다.
-   * 3-1. skipV1을 queue에 넣고 bfs 순회를 시작한다. skipV1은 visited에 기록한다.
+   * 3-1. cutV1을 queue에 넣고 bfs 순회를 시작한다. cutV1은 visited에 기록한다.
    * 현재 체크한 송전탑은 1개이므로 count를 1로 초기화한다.
-   * 3-2. skipV1과 연결된 다음 송전탑을 connectedVList[skipV1]에서 찾는다.
+   * 3-2. cutV1과 연결된 다음 송전탑을 connectedVList[cutV1]에서 찾는다.
    * 3-3. 이때 현재 송전탑과 다음 송전탑 모두 선을 끊는 송전탑 index에 포함된다면 건너뛴다
    * 3-4. 만약 이미 방문한 송전탑이면 건너뛴다.
    * 3-5. 방문이 가능한 송전탑이면 송전탑 개수를 1개 추가하므로 count를 1 늘리고 해당 송전탑을 queue에 push한다.
@@ -29,12 +29,12 @@ function solution(n, wires) {
   const visited = Array(n + 1).fill(-1);
   let visitedMask = 0;
 
-  const checkSize = (skipV1, skipV2) => {
+  const checkSize = (cutV1, cutV2) => {
     visitedMask++;
 
-    const queue = [skipV1];
+    const queue = [cutV1];
     let front = 0;
-    visited[skipV1] = visitedMask;
+    visited[cutV1] = visitedMask;
 
     let count = 1;
 
@@ -43,8 +43,8 @@ function solution(n, wires) {
 
       for (const next of connectedVList[cur]) {
         if (
-          (cur === skipV1 && next === skipV2) ||
-          (cur === skipV2 && next === skipV1)
+          (cur === cutV1 && next === cutV2) ||
+          (cur === cutV2 && next === cutV1)
         ) {
           continue;
         }
