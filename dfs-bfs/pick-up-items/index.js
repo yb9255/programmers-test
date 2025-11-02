@@ -1,3 +1,5 @@
+/** https://school.programmers.co.kr/learn/courses/30/parts/12421 */
+
 /**
   정답 출처
   https://cocococo.tistory.com/search/%EC%95%84%EC%9D%B4%ED%85%9C%20%EC%A4%8D%EA%B8%B0
@@ -68,7 +70,7 @@ const testSolution = (input, expected) => {
     '결과:',
     result === expected
       ? '✅ 통과'
-      : `❌ 실패 (기대값: ${expected}, 실제값: ${result})`,
+      : `❌ 실패 (기대값: ${expected}, 실제값: ${result})`
   );
 };
 
@@ -85,7 +87,7 @@ testSolution(
     7,
     8,
   ],
-  17,
+  17
 );
 
 testSolution(
@@ -101,7 +103,7 @@ testSolution(
     6,
     1,
   ],
-  11,
+  11
 );
 
 testSolution([[[1, 1, 5, 7]], 1, 1, 4, 7], 9);
@@ -117,7 +119,7 @@ testSolution(
     7,
     10,
   ],
-  15,
+  15
 );
 
 testSolution(
@@ -132,5 +134,5 @@ testSolution(
     6,
     3,
   ],
-  10,
+  10
 );
