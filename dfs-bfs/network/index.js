@@ -1,3 +1,5 @@
+/** https://school.programmers.co.kr/learn/courses/30/lessons/43162 */
+
 function solution(n, computers) {
   /** Pseudo Code
     1. 첫 재귀함수 실행 시 현재 컴퓨터를 방문했다고 기록한다.
@@ -36,7 +38,7 @@ const testSolution = (input, expected) => {
     '결과:',
     result === expected
       ? '✅ 통과'
-      : `❌ 실패 (기대값: ${expected}, 실제값: ${result})`,
+      : `❌ 실패 (기대값: ${expected}, 실제값: ${result})`
   );
 };
 
@@ -49,7 +51,7 @@ testSolution(
       [0, 0, 1],
     ],
   ],
-  2,
+  2
 );
 testSolution(
   [
@@ -60,5 +62,5 @@ testSolution(
       [0, 1, 1],
     ],
   ],
-  1,
+  1
 );
