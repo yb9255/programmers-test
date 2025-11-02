@@ -1,3 +1,5 @@
+/** https://school.programmers.co.kr/learn/courses/30/lessons/43164 */
+
 function solution(tickets) {
   /**
     Pseudo Code
@@ -46,7 +48,7 @@ const testSolution = (input, expected) => {
     '결과:',
     result.toString() === expected.toString()
       ? '✅ 통과'
-      : `❌ 실패 (기대값: ${expected}, 실제값: ${result})`,
+      : `❌ 실패 (기대값: ${expected}, 실제값: ${result})`
   );
 };
 
@@ -56,7 +58,7 @@ testSolution(
     ['HND', 'IAD'],
     ['JFK', 'HND'],
   ],
-  ['ICN', 'JFK', 'HND', 'IAD'],
+  ['ICN', 'JFK', 'HND', 'IAD']
 );
 
 testSolution(
@@ -67,5 +69,5 @@ testSolution(
     ['ATL', 'ICN'],
     ['ATL', 'SFO'],
   ],
-  ['ICN', 'ATL', 'ICN', 'SFO', 'ATL', 'SFO'],
+  ['ICN', 'ATL', 'ICN', 'SFO', 'ATL', 'SFO']
 );
