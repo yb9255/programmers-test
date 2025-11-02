@@ -1,3 +1,5 @@
+/** https://school.programmers.co.kr/learn/courses/30/lessons/43165 */
+
 function solution(numbers, target) {
   /** Pseudo Code
     1. 각 값을 순회하면서 이전 누적값에 +와 -현재값을 더하는 재귀를 돈다.
@@ -5,21 +7,20 @@ function solution(numbers, target) {
 
   let answer = 0;
 
-  const getTarget = (depth, sum) => {
+  const dfs = (depth, acc) => {
     if (depth === numbers.length) {
-      if (sum === target) {
+      if (acc === target) {
         answer++;
       }
 
       return;
     }
 
-    getTarget(depth + 1, sum + numbers[depth]);
-    getTarget(depth + 1, sum - numbers[depth]);
+    dfs(depth + 1, acc + numbers[depth]);
+    dfs(depth + 1, acc - numbers[depth]);
   };
 
-  getTarget(0, 0);
-
+  dfs(0, 0);
   return answer;
 }
 
@@ -29,7 +30,7 @@ const testSolution = (input, expected) => {
     '결과:',
     result === expected
       ? '✅ 통과'
-      : `❌ 실패 (기대값: ${expected}, 실제값: ${result})`,
+      : `❌ 실패 (기대값: ${expected}, 실제값: ${result})`
   );
 };
 
