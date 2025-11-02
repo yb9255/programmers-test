@@ -1,3 +1,5 @@
+/** https://school.programmers.co.kr/learn/courses/30/lessons/1844 */
+
 function solution(maps) {
   /** Pseudo Code
     1. dfs는 끝까지 갔다가 돌아오므로 비효율적. 최단거리만 탐색하는 bfs가 더 적절하다.
@@ -49,7 +51,7 @@ const testSolution = (input, expected) => {
     '결과:',
     result === expected
       ? '✅ 통과'
-      : `❌ 실패 (기대값: ${expected}, 실제값: ${result})`,
+      : `❌ 실패 (기대값: ${expected}, 실제값: ${result})`
   );
 };
 
@@ -61,7 +63,7 @@ testSolution(
     [1, 1, 1, 0, 1],
     [0, 0, 0, 0, 1],
   ],
-  11,
+  11
 );
 
 testSolution(
@@ -72,5 +74,5 @@ testSolution(
     [1, 1, 1, 0, 0],
     [0, 0, 0, 0, 1],
   ],
-  -1,
+  -1
 );
