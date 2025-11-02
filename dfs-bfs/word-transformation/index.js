@@ -1,3 +1,5 @@
+/** https://school.programmers.co.kr/learn/courses/30/lessons/43163 */
+
 function solution(begin, target, words) {
   /** Pseudo Code
     1. BFS로 최단거리를 탐색한다.
@@ -47,7 +49,7 @@ const testSolution = (begin, target, words, expected) => {
     '결과:',
     result === expected
       ? '✅ 통과'
-      : `❌ 실패 (기대값: ${expected}, 실제값: ${result})`,
+      : `❌ 실패 (기대값: ${expected}, 실제값: ${result})`
   );
 };
 
